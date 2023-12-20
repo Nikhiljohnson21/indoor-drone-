@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="mavros" type="mavros_node" name="mavros" output="screen">
+    <param name="~tcp_baud" type="int" value="57600"/>  <!-- Set baud rate -->
+    <param name="~serial_device" type="string" value="/dev/ttyAMC0"/> <!-- Set serial port -->
+  </node>
+  
+  
+</launch>
+
