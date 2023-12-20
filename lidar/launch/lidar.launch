@@ -1,0 +1,16 @@
+<launch>
+  <!-- Include the RPLidar S1 configuration -->
+  <include file="$(find rplidar_ros)/launch/rplidar.launch">
+  </include>
+  
+  <!-- Modify the parameters for the included RPLidar node -->
+  <node name="rplidar_node" pkg="rplidar_ros" type="rplidarNode" output="screen">
+    <param name="serial_port" value=" /dev/ttyUSB0"/>  <!-- Use the correct USB port for your Pixhawk -->
+    <param name="serial_baudrate" value="256000"/>
+  </node>
+  
+
+  <!-- Add other nodes and configurations for your robot -->
+  <!-- ... -->
+</launch>
+
